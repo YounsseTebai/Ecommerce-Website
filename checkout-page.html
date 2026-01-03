@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Shop | Checkout</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+<header>
+  <h1>E-Shop</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#">Shop</a>
+    <a href="checkout-page.html">Checkout</a>
+  </nav>
+</header>
+
+<div class="checkout-container">
+  <form class="checkout-form">
+    <h2>Checkout</h2>
+
+    <input type="text" placeholder="First Name">
+    <input type="text" placeholder="Last Name">
+    <input type="email" placeholder="Email" class="full">
+    <input type="text" placeholder="Address" class="full">
+    <input type="text" placeholder="City">
+    <input type="text" placeholder="Zip Code">
+
+    <h2>Payment</h2>
+    <input type="text" placeholder="Card Number" class="full">
+    <input type="text" placeholder="MM/YY">
+    <input type="text" placeholder="CVV">
+
+    <div class="summary full">
+      <div>
+        <span>Subtotal</span>
+        <span>$45.00</span>
+      </div>
+      <div>
+        <span>Shipping</span>
+        <span>$5.00</span>
+      </div>
+      <div>
+        <strong>Total</strong>
+        <strong>$50.00</strong>
+      </div>
+    </div>
+
+    <button type="submit">Place Order</button>
+  </form>
+</div>
+
+</body>
+</html>
