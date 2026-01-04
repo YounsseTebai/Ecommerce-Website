@@ -31,17 +31,17 @@
           <nav class="hidden md:flex items-center gap-8 text-lg">
             <a
               href="index.html"
-              class="relative text-gray-700 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-lime-500 after:transition-all after:duration-300 hover:after:w-full"
+              class="relative text-gray-700 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-sky-600 after:transition-all after:duration-300 hover:after:w-full"
               >Home</a
             >
             <a
               href="product-page.html"
-              class="relative text-gray-700 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-lime-500 after:transition-all after:duration-300 hover:after:w-full"
+              class="relative text-gray-700 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-sky-600 after:transition-all after:duration-300 hover:after:w-full"
               >Products</a
             >
             <a
               href="contact-page.html"
-              class="relative text-gray-700 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-lime-500 after:transition-all after:duration-300 hover:after:w-full"
+              class="relative text-gray-700 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-sky-600 after:transition-all after:duration-300 hover:after:w-full"
               >Contact</a
             >
           </nav>
@@ -49,16 +49,16 @@
           <!-- Actions -->
           <div class="hidden md:flex items-center gap-5">
             <a href="#"
-              ><i class="fas fa-search hover:text-lime-500 transition"></i
+              ><i class="fas fa-search hover:text-sky-600 transition"></i
             ></a>
-                    <a href="#"><i class="fas fa-user hover:text-lime-500 transition"></i
+                    <a href="Account-page.html"><i class="fas fa-user hover:text-sky-600 transition"></i
             ></a>
                     <div class="relative inline-block">
                         <a href="#"><i
-                  class="fa-solid fa-cart-shopping hover:text-lime-500 transition"
+                  class="fa-solid fa-cart-shopping hover:text-sky-600 transition"
                 ></i
               ></a>
-                        <span class="absolute -top-2 -right-2 bg-lime-600 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">0</span
+                        <span class="absolute -top-2 -right-2 bg-skytext-sky-600 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">0</span
               >
             </div>
           </div>
@@ -68,7 +68,7 @@
             <button
               id="mobile-menu-button"
               aria-expanded="false"
-              class="p-2 rounded-md text-gray-700 hover:text-sky-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500"
+              class="p-2 rounded-md cursor-pointer text-gray-700 hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500"
             >
               <svg
                 id="menu-open"
@@ -107,8 +107,8 @@
       <!-- nav Mobile -->
       <div class="md:hidden hidden border-t">
         <div class="px-4 pt-4 pb-6 space-y-4">
-          <a href="Home-page.html" class="block text-gray-700">Home</a>
-          <a href="Product-page.html" class="block text-gray-700">Products</a>
+          <a href="index.html" class="block text-gray-700">Home</a>
+          <a href="product-page.html" class="block text-gray-700">Products</a>
           <a href="contact-page.html" class="block text-gray-700">Contact</a>
         </div>
       </div>
@@ -129,260 +129,349 @@
         class="grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
       >
         <!-- Product Card -->
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-50 h-50 object-cover" src="img/HeadPhone 1.png" alt="product" />
-                    </div>
+        <div
+          class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative"
+        >
+          <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+            <a href="Product-view-page.html">
+              <img
+                class="w-50 h-50 object-cover"
+                src="img/HeadPhone 1.png"
+                alt="product"
+              />
+            </a>
+          </div>
 
-                    <div class="p-4">
-                        <h2 class="font-thin text-sm">HeadPhone gaming</h2>
-                        <span class="text-base block mt-2">$89.99</span>
+          <div class="p-4">
+            <h2 class="font-thin text-sm">Gaming HeadPhone</h2>
+            <span class="text-base block mt-2">$10.99</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">
+              Add To Cart
+            </button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
             ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
             ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-50 h-50 object-cover" src="img/HeadPhone 2.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-50 h-50 object-cover" src="img/tv-1.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
-                        <h2 class="font-thin text-sm">Rose HeadPhone</h2>
-                        <span class="text-base block mt-2">$40.99</span>
+                        <h2 class="font-thin text-sm">Smart Sumsung TV </h2>
+                        <span class="text-base block mt-2">$200</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-50 h-50 object-cover" src="img/HeadPhone 3.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-50 h-50 object-cover" src="img/power-pink.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
-                        <h2 class="font-thin text-sm">Simple Headphone</h2>
-                        <span class="text-base block mt-2">$15.99</span>
+                        <h2 class="font-thin text-sm">Power Pink</h2>
+                        <span class="text-base block mt-2">$60.00</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-42 h-50 object-cover" src="img/HeadPhone 4.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-50 h-50 object-cover" src="img/camera.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
-                        <h2 class="font-thin text-sm">Gamer HeadPhone</h2>
-                        <span class="text-base block mt-2">$69.99</span>
+                        <h2 class="font-thin text-sm">Instax Blue Camera</h2>
+                        <span class="text-base block mt-2">$4.99</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-50 h-50 object-cover" src="img/power-pink.png" alt="product" />
-                    </div>
-
-                    <div class="p-4">
-                        <h2 class="font-thin text-sm">power pink</h2>
-                        <span class="text-base block mt-2">$10.99</span>
-                    </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
-                        <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
-                    </div>
-                </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-40 h-40 object-cover" src="img/smart-watch.png" alt="product" />
-                    </div>
-
-                    <div class="p-4">
-                        <h2 class="font-thin text-sm">Smart Watch</h2>
-                        <span class="text-base block mt-2">$100.99</span>
-                    </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
-                        <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
-                    </div>
-                </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-40 h-40 object-cover" src="img/speaker.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-35 h-40 object-cover" src="img/speaker.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
                         <h2 class="font-thin text-sm">Smart Speaker</h2>
-                        <span class="text-base block mt-2">$10.99</span>
+                        <span class="text-base block mt-2">$10.00</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-32 h-40 object-cover" src="img/blutooth.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-50 h-50 object-cover" src="img/projector.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
-                        <h2 class="font-thin text-sm">Airpod Apple</h2>
-                        <span class="text-base block mt-2">$39.99</span>
+                        <h2 class="font-thin text-sm">Small Projector</h2>
+                        <span class="text-base block mt-2">$20.80</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-50 h-30 object-cover" src="img/Keyboard.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-50 h-50 object-cover" src="img/mouse.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
-                        <h2 class="font-thin text-sm">gaming Keyboard</h2>
-                        <span class="text-base block mt-2">$20.99</span>
+                        <h2 class="font-thin text-sm">Gaming Mouse</h2>
+                        <span class="text-base block mt-2">$88.99</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-40 h-40 object-cover" src="img/mouse.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-50 h-50 object-cover" src="img/manette-palettes-ps5.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
-                        <h2 class="font-thin text-sm">gaming mouse razer</h2>
-                        <span class="text-base block mt-2">$90.99</span>
+                        <h2 class="font-thin text-sm">Double Manette PS5</h2>
+                        <span class="text-base block mt-2">$100</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-50 h-50 object-cover" src="img/camera.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-50 h-50 object-cover" src="img/manette.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
-                        <h2 class="font-thin text-sm">mini camera for kids</h2>
-                        <span class="text-base block mt-2">$89.99</span>
+                        <h2 class="font-thin text-sm">Manette Xbox Serie X</h2>
+                        <span class="text-base block mt-2">$50.00</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-40 h-40 object-cover" src="img/tv-1.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-32 h-40 object-cover" src="img/blutooth.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
-                        <h2 class="font-thin text-sm">Sumsung Tv</h2>
-                        <span class="text-base block mt-2">$100.00</span>
+                        <h2 class="font-thin text-sm">Smart Earbuds Apple</h2>
+                        <span class="text-base block mt-2">$5</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-40 h-40 object-cover" src="img/manette-palettes-ps5.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-40 h-45 object-cover" src="img/HeadPhone 4.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
-                        <h2 class="font-thin text-sm">double manette PS5</h2>
-                        <span class="text-base block mt-2">$150.00</span>
+                        <h2 class="font-thin text-sm">Simple HeadPhone</h2>
+                        <span class="text-base block mt-2">$11.60</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-40 h-40 object-cover" src="img/manette.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-50 h-50 object-cover" src="img/phone-holder.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
-                        <h2 class="font-thin text-sm">gaming manette Xbox 360</h2>
-                        <span class="text-base block mt-2">$50.90</span>
+                        <h2 class="font-thin text-sm">Phone Holder</h2>
+                        <span class="text-base block mt-2">$8.99</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-40 h-40 object-cover" src="img/projector.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-35 h-40 object-cover" src="img/smart-watch.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
-                        <h2 class="font-thin text-sm">projector</h2>
-                        <span class="text-base block mt-2">$5.00</span>
+                        <h2 class="font-thin text-sm">Smart Watch For Men</h2>
+                        <span class="text-base block mt-2">$99.99</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
-                <div class="border-2 sm:w-75 w-80 h-80 border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full h-48 flex justify-center items-center">
-                        <img class="w-40 h-40 object-cover" src="img/phone-holder.png" alt="product" />
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-40 h-45 object-cover" src="img/HeadPhone 3.png" alt="product" />
+                        </a>
                     </div>
 
                     <div class="p-4">
-                        <h2 class="font-thin text-sm">phone holder</h2>
-                        <span class="text-base block mt-2">$2.00</span>
+                        <h2 class="font-thin text-sm">HeadPhone For Girls</h2>
+                        <span class="text-base block mt-2">$7.30</span>
                     </div>
-                    <div class="absolute inset-0 bg-black/10 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
                         <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-            ></a>
-                        <a href="" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-            ></a>
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
+                    </div>
+                </div>
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-58 h-35 object-cover" src="img/Keyboard.png" alt="product" />
+                        </a>
+                    </div>
+
+                    <div class="p-4">
+                        <h2 class="font-thin text-sm">Gaming Keyboard</h2>
+                        <span class="text-base block mt-2">$50.00</span>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                        <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
+                    </div>
+                </div>
+
+                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
+                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
+                        <a href="Product-view-page.html">
+                            <img class="w-50 h-50 object-cover" src="img/adapter.png" alt="product" />
+                        </a>
+                    </div>
+
+                    <div class="p-4">
+                        <h2 class="font-thin text-sm">Adapter For PC</h2>
+                        <span class="text-base block mt-2">$2</span>
+                    </div>
+                    <div class="p-4 pt-0">
+                        <button class="bg-sky-700 cursor-pointer w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
+                    </div>
+                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+                        <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
+              ></a>
                     </div>
                 </div>
             </div>
@@ -390,7 +479,7 @@
 
         <!-- Footer -->
         <footer class="w-full bg-black text-gray-400">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-14">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-15 py-14">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8">
                     <div>
                         <h1 class="text-white text-3xl font-bold mb-4">elixo</h1>
@@ -398,29 +487,29 @@
                         <p class="mb-2 text-sm">Had Bouhssousn, KH 10001</p>
                         <p class="mb-2 text-sm">
                             Email:
-                            <a href="mailto:info@clothshop.com" class="hover:text-green-500">elixo@gmail.com</a
+                            <a href="mailto:info@clothshop.com" class="hover:text-sky-600">elixo@gmail.com</a
               >
             </p>
             <p class="mb-4 text-sm">
               Phone:
-              <a href="tel:+212625696464" class="hover:text-green-500"
+              <a href="tel:+212625696464" class="hover:text-sky-600"
                 >(212) 625696464</a
               >
             </p>
             <a
               href="#"
-              class="inline-flex items-center gap-2 text-sm text-white border-b border-white hover:text-green-500 hover:border-green-500 transition pb-1"
+              class="inline-flex items-center gap-2 text-sm text-white border-b border-white hover:text-sky-600 hover:border-sky-600 transition pb-1"
               >Get direction <span>↗</span></a
             >
             <div class="flex gap-4 mt-6">
               <a
-                class="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-full hover:border-green-500 hover:text-green-500 transition"
+                class="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-full hover:border-sky-600 hover:text-sky-600 transition"
                 href="https://www.facebook.com/"
                 ><i class="fa-brands fa-facebook-f"></i
               ></a>
-                            <a class="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-full hover:border-green-500 hover:text-green-500 transition" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i
+                            <a class="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-full hover:border-sky-600 hover:text-sky-600 transition" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i
               ></a>
-                            <a class="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-full hover:border-green-500 hover:text-green-500 transition" href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i
+                            <a class="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-full hover:border-sky-600 hover:text-sky-600 transition" href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i
               ></a>
                     </div>
                 </div>
@@ -429,24 +518,27 @@
                     <h2 class="text-white text-lg mb-4">Help</h2>
                     <ul class="space-y-3 text-sm">
                         <li>
-                            <a class="hover:text-green-500" href="Privacy-page.html">Privacy Policy</a
-                >
-              </li>
-                        <li>
-                            <a class="hover:text-green-500" href="terms-condition.html">Terms & Conditions</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h2 class="text-white text-lg mb-4">About us</h2>
-                    <ul class="space-y-3 text-sm">
-                        <li>
-                            <a class="hover:text-green-500" href="contact-page.html">Contact Us</a
+                            <a class="hover:text-sky-600" href="Privacy-page.html">Privacy Policy</a
                 >
               </li>
               <li>
-                <a class="hover:text-green-500" href="Account-page.html"
+                <a class="hover:text-sky-600" href="terms-condition.html"
+                  >Terms & Conditions</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-white text-lg mb-4">About us</h2>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a class="hover:text-sky-600" href="contact-page.html"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-sky-600" href="Account-page.html"
                   >Account</a
                 >
               </li>
@@ -466,7 +558,7 @@
                 class="flex-1 bg-transparent px-4 py-3 text-sm text-white outline-none"
               />
               <button
-                class="bg-black px-2 md:px-2 text-white text-sm hover:bg-green-500 hover:text-black transition"
+                class="bg-black px-4 md:px-2 text-white text-sm hover:bg-sky-600 hover:text-black transition"
               >
                 Subscribe
               </button>
@@ -493,19 +585,19 @@
         class="fixed flex justify-around items-center bg-white shadow inset-x-0 bottom-0 h-16"
       >
         <div
-          class="h-full w-15 justify-center flex items-center border-t-3 border-sky-500"
+          class="h-full w-15 justify-center flex items-center border-t-3 border-sky-600"
         >
           <a href="#"
-            ><i class="fa-solid fa-house text-2xl text-sky-500 transition"></i
+            ><i class="fa-solid fa-house text-2xl text-sky-600 transition"></i
           ></a>
                 </div>
-                <a href="#"><i class="fas fa-search text-2xl hover:text-sky-500 transition"></i
+                <a href="#"><i class="fas fa-search text-2xl hover:text-sky-600 transition"></i
         ></a>
-                <a href="#"><i class="fas fa-user text-2xl hover:text-sky-500 transition"></i
+                <a href="#"><i class="fas fa-user text-2xl hover:text-sky-600 transition"></i
         ></a>
                 <div class="relative inline-block">
                     <a href="#"><i
-              class="fa-solid fa-cart-shopping text-2xl hover:text-sky-500 transition"
+              class="fa-solid fa-cart-shopping text-2xl hover:text-sky-600 transition"
             ></i
           ></a>
                     <span class="absolute -top-2 -right-2 bg-sky-600 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">0</span
