@@ -28,682 +28,453 @@
             }
         }
     </style>
+    <script src=""></script>
     <title>Elixo - Home</title>
 </head>
 
 <body class="font-[Geom]">
     <!-- Header -->
-    <header class="w-full bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex items-center">
-                    <a href="index.html" class="text-3xl sm:text-4xl font-[Geom]">elixo</a
-            >
-          </div>
+    <header class="sticky top-0 z-50 bg-[#F7F5F0]/95 backdrop-blur-md border-b border-[#252522]/10">
+        <div class="max-w-7xl mx-auto px-5 lg:px-10">
+            <div class="h-20 flex items-center justify-between">
 
-          <!-- Desktop nav -->
-          <nav class="hidden md:flex items-center gap-8 text-lg">
-            <a
-              href="index.html"
-              class="relative text-gray-700 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-sky-600 after:transition-all after:duration-300 hover:after:w-full"
-              >Home</a
-            >
-            <a
-              href="product-page.html"
-              class="relative text-gray-700 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-sky-600 after:transition-all after:duration-300 hover:after:w-full"
-              >Products</a
-            >
-            <a
-              href="contact-page.html"
-              class="relative text-gray-700 font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-sky-600 after:transition-all after:duration-300 hover:after:w-full"
-              >Contact</a
-            >
-          </nav>
+                <!-- Logo -->
+                <a href="index.html" class="text-3xl font-bold tracking-tighter text-[#252522]">
+        REWEAR<span class="text-[#A58C67]">.</span>
+      </a>
 
-          <!-- Actions -->
-          <div class="hidden md:flex items-center gap-5">
-            <a href="#"
-              ><i class="fas fa-search hover:text-sky-600 transition"></i
-            ></a>
-                    <a href="Account-page.html"><i class="fas fa-user hover:text-sky-600 transition"></i
-            ></a>
-                    <div class="relative inline-block">
-                        <a href="#"><i
-                  class="fa-solid fa-cart-shopping hover:text-sky-600 transition"
-                ></i
-              ></a>
-                        <span class="absolute -top-2 -right-2 bg-skytext-sky-600 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">0</span
-              >
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-9 text-sm font-medium text-[#252522]">
+                    <a href="index.html" class="hover:text-[#A58C67] transition">Home</a>
+                    <a href="product-page.html" class="hover:text-[#A58C67] transition">Shop</a>
+                    <a href="product-page.html?category=men" class="hover:text-[#A58C67] transition">Men</a>
+                    <a href="product-page.html?category=women" class="hover:text-[#A58C67] transition">Women</a>
+                    <a href="contact-page.html" class="hover:text-[#A58C67] transition">Contact</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-5 text-[#252522]">
+                    <a href="Account-page.html" aria-label="Account" class="hover:text-[#A58C67] transition">
+                        <i class="fa-regular fa-user text-lg"></i>
+                    </a>
+
+                    <a href="cart-page.html" aria-label="Shopping cart" class="relative hover:text-[#A58C67] transition">
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
+                        <span class="absolute -top-2 -right-2 bg-[#A58C67] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
+            0
+          </span>
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden text-xl" aria-label="Open menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+                </div>
             </div>
-          </div>
 
-          <!-- Mobile menu button -->
-          <div class="md:hidden flex items-center">
-            <button
-              id="mobile-menu-button"
-              aria-expanded="false"
-              class="p-2 rounded-md cursor-pointer text-gray-700 hover:text-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500"
-            >
-              <svg
-                id="menu-open"
-                class="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-              <svg
-                id="menu-close"
-                class="h-6 w-6 hidden"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden md:hidden border-t border-[#252522]/10 py-5 space-y-4">
+                <a href="index.html" class="block text-sm">Home</a>
+                <a href="product-page.html" class="block text-sm">Shop</a>
+                <a href="product-page.html?category=men" class="block text-sm">Men</a>
+                <a href="product-page.html?category=women" class="block text-sm">Women</a>
+                <a href="contact-page.html" class="block text-sm">Contact</a>
+            </nav>
         </div>
-      </div>
-      <!-- nav Mobile -->
-      <div class="md:hidden hidden border-t">
-        <div class="px-4 pt-4 pb-6 space-y-4">
-          <a href="index.html" class="block text-gray-700">Home</a>
-          <a href="product-page.html" class="block text-gray-700">Products</a>
-          <a href="contact-page.html" class="block text-gray-700">Contact</a>
-        </div>
-      </div>
     </header>
-    <!-- Sponsor Section -->
-    <section class="w-full bg-zinc-100 mb-16">
-      <div class="max-w-7xl mx-auto pl-20 sm:px-6 lg:px-10 py-12 md:py-20">
-        <div class="flex flex-col-reverse md:flex-row items-center gap-8">
-          <div class="w-full md:w-1/2">
-            <span class="text-lg font-thin"
-              >UP TO 40% OFF CHARGERS AND MORE.</span
-            >
-            <div class="mt-6 md:mt-8">
-              <h1
-                class="text-3xl sm:text-4xl md:text-6xl tracking-wider leading-tight"
-              >
-                Savings for dads and grads.
-              </h1>
-            </div>
-            <div class="mt-6">
-              <button
-                class="relative overflow-hidden before:absolute before:top-0 before:-left-full before:w-20 before:h-full before:bg-white/10 before:skew-x-5 before:transition-all before:duration-700 hover:before:left-full bg-black text-white text-lg py-3 cursor-pointer px-5 rounded-full"
-              >
-                Shop Collection
-              </button>
-            </div>
-          </div>
-          <div class="w-full lg:pl-55 md:w-1/2 l">
-            <img
-              class="w-80 h-80 object-contain"
-              src="img/web-shopping.png"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Category -->
-    <section class="px-4 sm:px-6 lg:px-45 mb-16">
-      <h1 class="text-3xl font-thin mb-14">Shop by Category</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-zinc-200 p-5 rounded-2xl flex flex-col justify-between">
-          <h1 class="text-xl font-semibold">Audio Devices</h1>
-                        <div class="flex justify-center items-center py-4">
-                            <img class="cursor-pointer hover:scale-110 transition delay-200 duration-500 max-h-50 object-contain" src="img/HeadPhone 2.png" alt="" />
-                        </div>
 
-                        <a href="product-page.html" class="bg-white px-5 py-3 rounded-full transition delay-150 duration-300 cursor-pointer hover:text-white hover:bg-black shadow mx-auto">Shop Now</a
-          >
-        </div>
-        <div class="bg-zinc-200 p-5 rounded-2xl flex flex-col justify-between">
-          <h1 class="text-xl font-semibold">Mobile Accessories</h1>
-                        <div class="flex justify-center items-center py-4">
-                            <img class="cursor-pointer hover:scale-110 transition delay-200 duration-500 max-h-40 object-contain" src="img/cable.png" alt="" />
-                        </div>
+    <!-- HERO SECTION -->
+    <section class="bg-[#F7F5F0] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-5 lg:px-10 py-12 md:py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-                        <a href="product-page.html" class="bg-white px-5 py-3 rounded-full transition delay-150 duration-300 cursor-pointer hover:text-white hover:bg-black shadow mx-auto">Shop Now</a
-          >
-        </div>
-        <div class="bg-zinc-200 p-5 rounded-2xl flex flex-col justify-between">
-          <h1 class="text-xl font-semibold">Smart Devices</h1>
-                        <div class="flex justify-center items-center py-4">
-                            <img class="cursor-pointer hover:scale-110 transition delay-200 duration-500 max-h-40 object-contain" src="img/smart-watch.png" alt="" />
-                        </div>
+                <!-- Text -->
+                <div class="max-w-xl">
+                    <span class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.2em] uppercase text-[#A58C67] mb-6">
+          <span class="w-8 h-px bg-[#A58C67]"></span> Second-hand fashion
+                    </span>
 
-                        <a href="product-page.html" class="bg-white px-5 py-3 rounded-full transition delay-150 duration-300 cursor-pointer hover:text-white hover:bg-black shadow mx-auto">Shop Now</a
-          >
-        </div>
-        <div class="bg-zinc-200 p-5 rounded-2xl flex flex-col justify-between">
-          <h1 class="text-xl font-semibold">Home Electronics</h1>
-                        <div class="flex justify-center items-center py-4">
-                            <img class="cursor-pointer hover:scale-110 transition delay-200 duration-500 max-h-60 object-contain" src="img/tv.png" alt="" />
-                        </div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.05] text-[#252522]">
+                        Good style.
+                        <span class="block text-[#A58C67]">Second life.</span>
+                    </h1>
 
-                        <a href="product-page.html" class="bg-white px-5 py-3 rounded-full transition delay-150 duration-300 cursor-pointer hover:text-white hover:bg-black shadow mx-auto">Shop Now</a
-          >
-        </div>
-      </div>
-    </section>
-    <!-- Discount img -->
-    <section class="px-4 sm:px-6 lg:px-45 text-white mb-16">
-      <div class="max-w-7xl mx-auto relative mb-10">
-        <img
-          class="w-full h-45 sm:h-60 md:h-62 md:h-80 lg:h-110 rounded-2xl"
-          src="img/banner-collection-3.jpg"
-          alt=""
-        />
-        <div
-          class="absolute inset-0 flex flex-col justify-start p-3 sm:p-12 md:p-16"
-        >
-          <span class="text-base sm:text-base">SALE UP TO 30% OFF TODAY</span>
-                        <h1 class="text-lg sm:text-4xl md:text-5xl mt-4">
-                            Best Deals Discounts
-                        </h1>
-                        <p class="font-thin text-base sm:text-base mt-1">
-                            Fast wireless charging on-the-go.
-                        </p>
-                        <a href="product-page.html" class="inline-block relative overflow-hidden before:absolute before:top-0 before:-left-full before:w-20 before:h-full before:bg-white/10 before:skew-x-5 before:transition-all before:duration-700 hover:before:left-full bg-sky-600 w-34 text-sm rounded-full py-2 px-4 mt-4 sm:w-38">Shop Collection</a
-          >
-        </div>
-      </div>
-    </section>
-    <!--  -->
-    <section class="px-4 sm:px-6 lg:px-45 mb-16">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- CARD 1 -->
-          <div class="relative rounded-3xl overflow-hidden">
-            <img
-              src="img/electronic-6.jpg"
-              class="w-full h-100 sm:h-100 md:h-96 lg:h-110 object-cover"
-              alt=""
-            />
-            <div
-              class="absolute inset-0 flex flex-col justify-end items-center p-6 md:p-6 text-black bg-gradient-to-t from-black/10"
-            >
-              <span class="text-xs tracking-widest">HOT ACCESSORIES</span>
-              <h1 class="text-2xl sm:text-xl md:text-2xl font-bold">
-                Smart Assistant
-              </h1>
-              <a
-                href="#"
-                class="mt-4 relative overflow-hidden before:absolute before:top-0 before:-left-full before:w-20 before:h-full before:bg-white/10 before:skew-x-5 before:transition-all before:duration-700 hover:before:left-full inline-block bg-sky-600 text-white px-6 py-2 rounded-full"
-                >Shop now</a
-              >
-            </div>
-          </div>
+                    <p class="mt-6 text-base md:text-lg leading-8 text-[#85816F] max-w-md">
+                        Discover unique pre-loved clothes at prices you'll love. Give great fashion another chance.
+                    </p>
 
-          <!-- CARD 2 -->
-          <div class="relative rounded-3xl overflow-hidden">
-            <img
-              src="img/electronic-7.jpg"
-              class="w-full h-100 sm:h-100 md:h-96 lg:h-110 object-cover"
-              alt=""
-            />
-            <div
-              class="absolute inset-0 flex flex-col justify-end items-center p-6 md:p-6 text-black bg-gradient-to-t from-black/10"
-            >
-              <span class="text-xs tracking-widest"
-                >FAST AND FREE SHIPPING</span
-              >
-              <h1 class="text-2xl sm:text-xl md:text-2xl font-bold">
-                True Earbuds
-              </h1>
-              <a
-                href="#"
-                class="mt-4 relative overflow-hidden before:absolute before:top-0 before:-left-full before:w-20 before:h-full before:bg-white/10 before:skew-x-5 before:transition-all before:duration-700 hover:before:left-full inline-block bg-sky-600 text-white px-6 py-2 rounded-full"
-                >Shop now</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--  -->
-    <section class="px-4 sm:px-6 lg:px-45 mb-16">
-      <div
-        class="w-full rounded-2xl bg-sky-600 flex flex-col md:flex-row items-center gap-6 p-6 md:p-10"
-      >
-        <img
-          class="w-full md:w-1/2 object-cover rounded-md"
-          src="img/person.jpg"
-          alt=""
-        />
-        <div class="flex-1 flex items-start flex-col text-white">
-          <h1 class="text-sm md:text-md">ULTIMATE APPLE ACCESSORY.</h1>
-          <h1 class="text-3xl md:text-6xl font-thin mt-2">60% Discount</h1>
-          <p class="text-sm text-gray-100 mt-4 max-w-xl">
-            Find the latest and greatest gadgets to enhance your electronic
-            devices.
-          </p>
-          <h1 class="font-thin mt-4">
-            <b class="font-bold">Hungry up!</b> Deals end in :
-          </h1>
-          <div class="flex gap-2 items-center mt-4">
-            <div
-              class="bg-white w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-black"
-            >
-              <b class="font-bold">90</b>
-            </div>
-            <span class="text-white">:</span>
-            <div
-              class="bg-white w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-black"
-            >
-              <b class="font-bold">07</b>
-            </div>
-            <span class="text-white">:</span>
-            <div
-              class="bg-white w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-black"
-            >
-              <b class="font-bold">55</b>
-            </div>
-            <span class="text-white">:</span>
-            <div
-              class="bg-white w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-black"
-            >
-              <b class="font-bold">36</b>
-            </div>
-          </div>
-          <a
-            class="bg-black relative overflow-hidden before:absolute before:top-0 before:-left-full before:w-20 before:h-full before:bg-white/10 before:skew-x-5 before:transition-all before:duration-700 hover:before:left-full rounded-full text-white px-5 py-3 mt-6"
-            href=""
-            >shop now</a
-          >
-        </div>
-      </div>
-    </section>
-    <!-- Tranding Product -->
-    <section class="px-4 sm:px-6 lg:px-45 mb-16">
-      <div class="max-w-7xl mx-auto">
-        <h1 class="mb-8 text-3xl">Trending Products</h1>
-        <div
-          class="grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          <!-- product card -->
-          <div
-            class="border-2 h-auto sm:w-75 lg:w-70 w-80 border-zinc-200 rounded-2xl overflow-hidden group relative"
-          >
-            <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
-              <a href="Product-view-page.html">
-                <img
-                class="w-50 h-50 object-cover"
-                src="img/incasable.png"
-                alt="product"
-              />
-              </a>
+                    <div class="mt-9 flex flex-wrap items-center gap-4">
+                        <a href="product-page.html" class="inline-flex items-center gap-3 bg-[#252522] text-white px-8 py-4 text-sm font-medium hover:bg-[#A58C67] transition duration-300 rounded-sm">
+            Shop collection
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
 
-                    </div>
-                    <div class="p-4">
-                        <h2 class="font-thin text-sm">
-                            UltraGlass 2 Therted Screen Protector for iPhone 15 Pro
-                        </h2>
-                        <span class="text-base block mt-2">$33.99</span>
-                    </div>
-                    <div class="p-4 pt-0">
-                        <button class="bg-sky-700 cursor-pointer  w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
-                    </div>
-                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
-                        <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-              ></a>
-                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-              ></a>
-                    </div>
-                </div>
-
-                <div class="border-2 lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
-                        <a href="Product-view-page.html">
-                            <img class="w-50 h-50 object-cover" src="img/electronic-11.png" alt="product" />
-                        </a>
+                        <a href="product-page.html" class="text-sm font-medium text-[#252522] border-b border-[#252522] pb-1 hover:text-[#A58C67] hover:border-[#A58C67] transition">
+            Explore more
+          </a>
                     </div>
 
-                    <div class="p-4">
-                        <h2 class="font-thin text-sm">Smart Light Switch with Thread</h2>
-                        <span class="text-base block mt-2">$49.99</span>
-                    </div>
-                    <div class="p-4 pt-0">
-                        <button class="bg-sky-700 cursor-pointer  w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
-                    </div>
-                    <div class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
-                        <a href="" title="Add To Cart" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-solid fa-cart-shopping"></i
-              ></a>
-                        <a href="Product-view-page.html" title="View" class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"><i class="fa-regular fa-eye"></i
-              ></a>
-                    </div>
-                </div>
-
-                <div class="border-2 lg:w-70  sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative">
-                    <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
-                        <a href="Product-view-page.html">
-                            <img class="w-50 h-50 object-cover" src="img/electronic-13.png" alt="product" />
-                        </a>
-
-                    </div>
-
-                    <div class="p-4">
-                        <h2 class="font-thin text-sm">SoundForm Rise</h2>
-                        <span class="text-base block mt-2 text-red-600"><del class="text-sm text-zinc-500">$100.00</del> $79.99</span
-              >
-            </div>
-            <div class="p-4 pt-0">
-              <button class="bg-sky-700 cursor-pointer  w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
-            </div>
-            <div
-              class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition"
-            >
-              <a
-                href=""
-                title="Add To Cart"
-                class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"
-                ><i class="fa-solid fa-cart-shopping"></i
-              ></a>
-              <a
-                href="Product-view-page.html"
-                title="View"
-                class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"
-                ><i class="fa-regular fa-eye"></i
-              ></a>
-            </div>
-          </div>
-
-          <div
-            class="border-2 lg:inline-block lg:w-70 sm:w-75 w-80 h-auto border-zinc-200 rounded-2xl overflow-hidden group relative"
-          >
-            <div class="w-full bg-gray-200 h-48 flex justify-center items-center">
-              <a href="Product-view-page.html">
-                <img
-                class="w-50 h-50 object-cover"
-                src="img/HeadPhone 2.png"
-                alt="product"
-              />
-              </a>
-              
-            </div>
-
-            <div class="p-4">
-              <h2 class="font-thin text-sm">
-                Wireless On-Ear HeadPhones for Kids
-              </h2>
-              <span class="text-base block mt-2 text-red-600"
-                ><del class="text-sm text-zinc-500">$34.99</del> $24.99</span
-              >
-            </div>
-            <div class="p-4 pt-0">
-              <button class="bg-sky-700 cursor-pointer  w-[100%] text-white px-4 py-2 rounded-xl">Add To Cart</button>
-            </div>
-            <div
-              class="absolute hidden inset-0 bg-black/10 lg:hidden items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition"
-            >
-              <a
-                href=""
-                title="Add To Cart"
-                class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"
-                ><i class="fa-solid fa-cart-shopping"></i
-              ></a>
-              <a
-                href="Product-view-page.html"
-                title="View"
-                class="bg-white hover:bg-green-400 hover:text-zinc-200 transition text-black px-4 py-3 rounded text-sm"
-                ><i class="fa-regular fa-eye"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--  -->
-    <section class="px-4 sm:px-6 lg:px-45">
-      <div class="max-w-7xl mx-auto bg-zinc-100 rounded-2xl py-12 px-6 mb-16">
-        <div class="text-center mb-10">
-          <h1 class="text-3xl font-thin">Happy Clients</h1>
-          <p class="font-thin mt-2">
-            See what our satisfied customers have to say about our electronic
-            accessories.
-          </p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-2xl p-6">
-            <div class="text-yellow-400 mb-5">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h3 class="font-bold text-lg mb-2">Best Online Fashion Site</h3>
-            <p class="font-thin mb-6">
-              "I always find somthing stylish and affordable on this web fashion
-              site"
-            </p>
-            <h3 class="text-sm font-bold">Robert smith</h3>
-            <span class="text-gray-500 text-sm">customer from USA</span>
-                        <hr class="border-gray-300 my-6" />
-                        <div class="flex gap-4 items-center">
-                            <img class="w-12 h-12 object-cover" src="img/electronic-13.png" alt="" />
-                            <div>
-                                <span class="font-thin text-sm">SoundForm Rise</span>
-                                <h3>$105.99</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl p-6">
-                        <div class="text-yellow-400 mb-5">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Best Online Fashion Site</h3>
-                        <p class="font-thin mb-6">
-                            "I always find somthing stylish and affordable on this web fashion site"
-                        </p>
-                        <h3 class="text-sm font-bold">Allen len</h3>
-                        <span class="text-gray-500 text-sm">customer from France</span>
-                        <hr class="border-gray-300 my-6" />
-                        <div class="flex gap-4 items-center">
-                            <img class="w-12 h-12 object-cover" src="img/electronic-15.png" alt="" />
-                            <div>
-                                <span class="font-thin text-sm">Wirless On-Ear HeadPhones</span>
-                                <h3>$150.99</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl p-6">
-                        <div class="text-yellow-400 mb-5">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Best Online Fashion Site</h3>
-                        <p class="font-thin mb-6">
-                            "I always find somthing stylish and affordable on this web fashion site"
-                        </p>
-                        <h3 class="text-sm font-bold">Peter Rope</h3>
-                        <span class="text-gray-500 text-sm">customer from German</span>
-                        <hr class="border-gray-300 my-6" />
-                        <div class="flex gap-4 items-center">
-                            <img class="w-12 h-12 object-cover" src="img/electronic-11.png" alt="" />
-                            <div>
-                                <span class="font-thin text-sm">Smart Light</span>
-                                <h3>$30.99</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </section>
-            <!--  -->
-            <section class="px-4 sm:px-6 lg:px-45 mb-16">
-                <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="text-center border-2 border-zinc-200 rounded-2xl py-6 px-4">
-                        <i class="fa-solid fa-box text-3xl mb-4"></i>
-                        <h1>Free Shipping</h1>
-                        <span class="text-sm font-thin">Free shipping over order $120</span>
-                    </div>
-                    <div class="text-center border-2 border-zinc-200 rounded-2xl py-6 px-4">
-                        <i class="fa-solid fa-credit-card text-3xl mb-4"></i>
-                        <h1>Flexible Payment</h1>
-                        <span class="text-sm font-thin">Pay with Multiple Credit Cards</span>
-                    </div>
-                    <div class="text-center border-2 border-zinc-200 rounded-2xl py-6 px-4">
-                        <i class="fa-solid fa-person-walking-arrow-loop-left text-3xl mb-4"></i>
-                        <h1>14 Day Returns</h1>
-                        <span class="text-sm font-thin">Within 30 days for an exchange</span>
-                    </div>
-                    <div class="text-center border-2 border-zinc-200 rounded-2xl py-6 px-4">
-                        <i class="fa-solid fa-circle-info text-3xl mb-4"></i>
-                        <h1>Premium Support</h1>
-                        <span class="text-sm font-thin">Outstanding premium support</span>
-                    </div>
-                </div>
-            </section>
-            <!-- Footer -->
-            <footer class="w-full bg-black text-gray-400">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-15 py-14">
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8">
+                    <div class="mt-12 flex items-center gap-8 text-xs text-[#85816F]">
                         <div>
-                            <h1 class="text-white text-3xl font-bold mb-4">elixo</h1>
-                            <p class="mb-2 text-sm">Address: 1234 Fashion Street, Suite 567,</p>
-                            <p class="mb-2 text-sm">Had Bouhssousn, KH 10001</p>
-                            <p class="mb-2 text-sm">
-                                Email:
-                                <a href="mailto:info@clothshop.com" class="hover:text-sky-600">elixo@gmail.com</a
-              >
-            </p>
-            <p class="mb-4 text-sm">
-              Phone:
-              <a href="tel:+212625696464" class="hover:text-sky-600"
-                >(212) 625696464</a
-              >
-            </p>
-            <a
-              href="#"
-              class="inline-flex items-center gap-2 text-sm text-white border-b border-white hover:text-sky-600 hover:border-sky-600 transition pb-1"
-              >Get direction <span>↗</span></a
-            >
-            <div class="flex gap-4 mt-6">
-              <a
-                class="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-full hover:border-sky-600 hover:text-sky-600 transition"
-                href="https://www.facebook.com/"
-                ><i class="fa-brands fa-facebook-f"></i
-              ></a>
-                                <a class="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-full hover:border-sky-600 hover:text-sky-600 transition" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i
-              ></a>
-                                <a class="w-9 h-9 flex items-center justify-center border border-gray-600 rounded-full hover:border-sky-600 hover:text-sky-600 transition" href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i
-              ></a>
+                            <p class="text-xl font-semibold text-[#252522]">Unique</p>
+                            <p>One-of-a-kind finds</p>
+                        </div>
+                        <div class="w-px h-9 bg-[#D8D3C8]"></div>
+                        <div>
+                            <p class="text-xl font-semibold text-[#252522]">Affordable</p>
+                            <p>Better prices</p>
                         </div>
                     </div>
+                </div>
 
-                    <div>
-                        <h2 class="text-white text-lg mb-4">Help</h2>
-                        <ul class="space-y-3 text-sm">
-                            <li>
-                                <a class="hover:text-sky-600" href="Privacy-page.html">Privacy Policy</a
-                >
-              </li>
-                            <li>
-                                <a class="hover:text-sky-600" href="terms-condition.html">Terms & Conditions</a>
-                            </li>
-                        </ul>
+                <!-- Image -->
+                <div class="relative">
+                    <div class="absolute -top-5 -right-5 w-32 h-32 bg-[#E8E1D5] rounded-full"></div>
+
+                    <img src="img/hero_image.jpg" alt="Second-hand fashion collection" class="relative z-10 w-full h-[420px] md:h-[560px] object-cover rounded-sm" />
+
+                    <div class="absolute z-20 bottom-6 left-6 bg-white/95 backdrop-blur-sm px-5 py-4 shadow-lg">
+                        <p class="text-xs uppercase tracking-widest text-[#A58C67]">Fashion with purpose</p>
+                        <p class="mt-1 text-lg font-semibold text-[#252522]">Wear it again.</p>
                     </div>
+                </div>
 
-                    <div>
-                        <h2 class="text-white text-lg mb-4">About us</h2>
-                        <ul class="space-y-3 text-sm">
-                            <li>
-                                <a class="hover:text-sky-600" href="contact-page.html">Contact Us</a
-                >
-              </li>
-              <li>
-                <a class="hover:text-sky-600" href="Account-page.html"
-                  >Account</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 class="text-white text-lg mb-4">Sign Up for Email</h2>
-            <p class="text-sm mb-4">
-              Sign up to get first dibs on new arrivals, sales, exclusive
-              content, events and more!
-            </p>
-            <div class="flex bg-[#1a1a1a] rounded-lg overflow-hidden">
-              <input
-                type="email"
-                placeholder="Enter your email..."
-                class="flex-1 bg-transparent px-4 py-3 text-sm text-white outline-none"
-              />
-              <button
-                class="bg-black px-4 md:px-2 text-white text-sm hover:bg-sky-600 hover:text-black transition"
-              >
-                Subscribe
-              </button>
             </div>
-          </div>
         </div>
+    </section>
 
-        <div
-          class="border-t border-gray-700 py-6 flex flex-col md:flex-row justify-between items-center text-sm gap-4"
-        >
-          <p>© 2026 Elixo Shop. All Rights Reserved</p>
-          <div class="flex gap-4 text-2xl text-white">
-            <i class="fa-brands fa-cc-visa"></i>
-            <i class="fa-brands fa-cc-paypal"></i>
-            <i class="fa-brands fa-cc-mastercard"></i>
-            <i class="fa-brands fa-cc-amex"></i>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Bottom Nav Mobile -->
-    <div class="relative md:hidden">
-      <div
-        class="fixed flex justify-around items-center bg-white shadow inset-x-0 bottom-0 h-16"
-      >
-        <div
-          class="h-full w-15 justify-center flex items-center border-t-3 border-sky-600"
-        >
-          <a href="#"
-            ><i class="fa-solid fa-house text-2xl text-sky-600 transition"></i
-          ></a>
+    <!-- Category -->
+    <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-5 lg:px-10">
+
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+                <div>
+                    <span class="text-xs font-semibold tracking-[0.2em] uppercase text-[#A58C67]">
+          Find your style
+        </span>
+                    <h2 class="mt-3 text-3xl md:text-4xl font-semibold text-[#252522]">
+                        Shop by category
+                    </h2>
+                </div>
+
+                <a href="product-page.html" class="text-sm font-medium text-[#252522] border-b border-[#252522] pb-1 hover:text-[#A58C67] transition">
+        View all categories
+      </a>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+
+                <!-- Men -->
+                <a href="product-page.html?category=men" class="group">
+                    <div class="relative overflow-hidden bg-[#F7F5F0]">
+                        <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=700&q=85" alt="Men's fashion" class="w-full h-64 md:h-96 object-cover transition duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition"></div>
+                        <span class="absolute bottom-5 left-5 text-white text-xl font-semibold">Men</span>
                     </div>
-                    <a href="#"><i class="fas fa-search text-2xl hover:text-sky-600 transition"></i
-        ></a>
-                    <a href="#"><i class="fas fa-user text-2xl hover:text-sky-600 transition"></i
-        ></a>
-                    <div class="relative inline-block">
-                        <a href="#"><i
-              class="fa-solid fa-cart-shopping text-2xl hover:text-sky-600 transition"
-            ></i
-          ></a>
-                        <span class="absolute -top-2 -right-2 bg-sky-600 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">0</span
-          >
+                </a>
+
+                <!-- Women -->
+                <a href="product-page.html?category=women" class="group">
+                    <div class="relative overflow-hidden bg-[#F7F5F0]">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85" alt="Women's fashion" class="w-full h-64 md:h-96 object-cover transition duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition"></div>
+                        <span class="absolute bottom-5 left-5 text-white text-xl font-semibold">Women</span>
+                    </div>
+                </a>
+
+                <!-- Shoes -->
+                <a href="product-page.html?category=shoes" class="group">
+                    <div class="relative overflow-hidden bg-[#F7F5F0]">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85" alt="Shoes" class="w-full h-64 md:h-96 object-cover transition duration-700 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition"></div>
+                        <span class="absolute bottom-5 left-5 text-white text-xl font-semibold">Shoes</span>
+                    </div>
+                </a>
+
+
+
+            </div>
         </div>
-      </div>
-    </div>
-  </body>
+    </section>
+
+
+
+    <!-- FEATURED COLLECTION -->
+    <section class="bg-[#F7F5F0] py-20">
+        <div class="max-w-7xl mx-auto px-5 lg:px-10">
+
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10">
+                <div>
+                    <span class="text-xs font-semibold tracking-[0.2em] uppercase text-[#A58C67]">
+          Carefully selected
+        </span>
+                    <h2 class="mt-3 text-3xl md:text-4xl font-semibold text-[#252522]">
+                        Featured collection
+                    </h2>
+                    <p class="mt-3 text-sm text-[#85816F]">
+                        Discover unique pieces ready for a new story.
+                    </p>
+                </div>
+
+                <a href="product-page.html" class="text-sm font-medium text-[#252522] border-b border-[#252522] pb-1 hover:text-[#A58C67] transition">
+        View all products
+      </a>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+
+                <!-- Product 1 -->
+                <article class="group">
+                    <a href="Product-view-page.html" class="block relative overflow-hidden bg-white">
+                        <span class="absolute top-3 left-3 z-10 bg-white px-3 py-1 text-[10px] uppercase tracking-wider">
+            Unique piece
+          </span>
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=85" alt="Vintage jacket" class="w-full h-64 md:h-80 object-cover transition duration-700 group-hover:scale-105">
+                    </a>
+                    <div class="pt-4">
+                        <p class="text-xs text-[#85816F]">Men / Jackets</p>
+                        <h3 class="mt-1 text-sm font-medium text-[#252522]">Vintage Jacket</h3>
+                        <p class="mt-2 text-sm font-semibold text-[#252522]">180 MAD</p>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="group">
+                    <a href="Product-view-page.html" class="block relative overflow-hidden bg-white">
+                        <span class="absolute top-3 left-3 z-10 bg-white px-3 py-1 text-[10px] uppercase tracking-wider">
+            Great condition
+          </span>
+                        <img src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?auto=format&fit=crop&w=700&q=85" alt="Casual shirt" class="w-full h-64 md:h-80 object-cover transition duration-700 group-hover:scale-105">
+                    </a>
+                    <div class="pt-4">
+                        <p class="text-xs text-[#85816F]">Men / Shirts</p>
+                        <h3 class="mt-1 text-sm font-medium text-[#252522]">Classic Casual Shirt</h3>
+                        <p class="mt-2 text-sm font-semibold text-[#252522]">95 MAD</p>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="group">
+                    <a href="Product-view-page.html" class="block relative overflow-hidden bg-white">
+                        <span class="absolute top-3 left-3 z-10 bg-white px-3 py-1 text-[10px] uppercase tracking-wider">
+            Unique piece
+          </span>
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=85" alt="Women's fashion outfit" class="w-full h-64 md:h-80 object-cover transition duration-700 group-hover:scale-105">
+                    </a>
+                    <div class="pt-4">
+                        <p class="text-xs text-[#85816F]">Women / Dresses</p>
+                        <h3 class="mt-1 text-sm font-medium text-[#252522]">Elegant Dress</h3>
+                        <p class="mt-2 text-sm font-semibold text-[#252522]">140 MAD</p>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="group">
+                    <a href="Product-view-page.html" class="block relative overflow-hidden bg-white">
+                        <span class="absolute top-3 left-3 z-10 bg-white px-3 py-1 text-[10px] uppercase tracking-wider">
+            Great condition
+          </span>
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85" alt="Sneakers" class="w-full h-64 md:h-80 object-cover transition duration-700 group-hover:scale-105">
+                    </a>
+                    <div class="pt-4">
+                        <p class="text-xs text-[#85816F]">Shoes / Sneakers</p>
+                        <h3 class="mt-1 text-sm font-medium text-[#252522]">Classic Sneakers</h3>
+                        <p class="mt-2 text-sm font-semibold text-[#252522]">220 MAD</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND STORY -->
+    <section class="bg-white py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-5 lg:px-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+
+                <!-- Image -->
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85" alt="Clothing store interior" class="w-full h-[380px] md:h-[520px] object-cover" />
+                    <div class="absolute -bottom-5 -right-3 md:-right-5 bg-[#E8E1D5] w-28 h-28 -z-0"></div>
+                </div>
+
+                <!-- Content -->
+                <div class="max-w-lg">
+                    <span class="text-xs font-semibold tracking-[0.2em] uppercase text-[#A58C67]">
+          More than fashion
+        </span>
+
+                    <h2 class="mt-5 text-4xl md:text-5xl font-semibold leading-tight text-[#252522]">
+                        Fashion deserves
+                        <span class="text-[#A58C67]">a second life.</span>
+                    </h2>
+
+                    <p class="mt-6 text-base leading-8 text-[#85816F]">
+                        Great clothes deserve to be worn again. We bring together unique pre-loved pieces and give them another chance to become part of someone's story.
+                    </p>
+
+                    <p class="mt-4 text-base leading-8 text-[#85816F]">
+                        Discover your next favourite piece while making a more thoughtful fashion choice.
+                    </p>
+
+                    <a href="product-page.html" class="inline-flex items-center gap-3 mt-8 bg-[#252522] text-white px-8 py-4 text-sm font-medium hover:bg-[#A58C67] transition duration-300">
+          Discover our collection
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+    <section class="bg-[#F7F5F0] py-20">
+        <div class="max-w-7xl mx-auto px-5 lg:px-10">
+
+            <div class="text-center max-w-xl mx-auto mb-14">
+                <span class="text-xs font-semibold tracking-[0.2em] uppercase text-[#A58C67]">
+        The REWEAR difference
+      </span>
+
+                <h2 class="mt-3 text-3xl md:text-4xl font-semibold text-[#252522]">
+                    A better way to shop.
+                </h2>
+
+                <p class="mt-4 text-sm leading-7 text-[#85816F]">
+                    Good fashion, thoughtful choices, and a simple shopping experience.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                <!-- Benefit 1 -->
+                <div class="text-center px-5">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-[#E8E1D5] text-[#252522]">
+                        <i class="fa-solid fa-tag text-xl"></i>
+                    </div>
+                    <h3 class="mt-6 text-lg font-semibold text-[#252522]">
+                        Affordable Fashion
+                    </h3>
+                    <p class="mt-3 text-sm leading-7 text-[#85816F]">
+                        Discover great clothing at prices that make sense.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="text-center px-5">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-[#E8E1D5] text-[#252522]">
+                        <i class="fa-solid fa-shirt text-xl"></i>
+                    </div>
+                    <h3 class="mt-6 text-lg font-semibold text-[#252522]">
+                        Unique Pieces
+                    </h3>
+                    <p class="mt-3 text-sm leading-7 text-[#85816F]">
+                        Find special pieces that bring personality to your style.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="text-center px-5">
+                    <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-[#E8E1D5] text-[#252522]">
+                        <i class="fa-solid fa-truck-fast text-xl"></i>
+                    </div>
+                    <h3 class="mt-6 text-lg font-semibold text-[#252522]">
+                        Cash on Delivery
+                    </h3>
+                    <p class="mt-3 text-sm leading-7 text-[#85816F]">
+                        Pay when your order arrives at your doorstep.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-[#252522] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-5 lg:px-10">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 pb-14">
+
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="text-3xl font-bold tracking-tighter">
+          REWEAR<span class="text-[#B4A58A]">.</span>
+        </a>
+
+                    <p class="mt-5 text-sm text-white/60 leading-7 max-w-xs">
+                        Discover unique pre-loved fashion and give great clothes a second life.
+                    </p>
+
+                    <div class="flex items-center gap-4 mt-6 text-lg text-white/70">
+                        <a href="#" aria-label="Instagram" class="hover:text-[#B4A58A] transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="hover:text-[#B4A58A] transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="TikTok" class="hover:text-[#B4A58A] transition">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Shop -->
+                <div>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase">Shop</h3>
+                    <ul class="mt-6 space-y-4 text-sm text-white/60">
+                        <li><a href="product-page.html" class="hover:text-white transition">All Products</a></li>
+                        <li><a href="product-page.html?category=men" class="hover:text-white transition">Men</a></li>
+                        <li><a href="product-page.html?category=women" class="hover:text-white transition">Women</a></li>
+                        <li><a href="product-page.html?category=shoes" class="hover:text-white transition">Shoes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Information -->
+                <div>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase">Information</h3>
+                    <ul class="mt-6 space-y-4 text-sm text-white/60">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="contact-page.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition">Shipping Information</a></li>
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase">Contact Us</h3>
+                    <ul class="mt-6 space-y-4 text-sm text-white/60">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-regular fa-envelope mt-1"></i>
+                            <span>contact@rewear.ma</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1"></i>
+                            <span>Morocco</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/10 pt-7 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-white/50">
+                    © 2026 REWEAR. All rights reserved.
+                </p>
+
+                <p class="text-xs text-white/50">
+                    Second life. Better style.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+    <script src="JS/index.js"></script>
+
+</body>
+
+
 </html>
